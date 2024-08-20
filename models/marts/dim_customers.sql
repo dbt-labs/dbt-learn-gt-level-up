@@ -19,6 +19,7 @@ customer_orders as (
 
 final as (
     select
+        --- add a comment for CI demo
         customers.customer_id,
         customers.first_name,
         customers.last_name,
