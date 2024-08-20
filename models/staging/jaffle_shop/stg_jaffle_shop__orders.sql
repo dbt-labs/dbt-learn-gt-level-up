@@ -9,6 +9,7 @@ source as (
 renamed as (
 
     select
+    -- adding a comment to demo CI job
         id as order_id,
         user_id as customer_id,
         order_date,
