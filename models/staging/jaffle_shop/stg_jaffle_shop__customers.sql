@@ -7,7 +7,7 @@ source as (
 ),
 
 renamed as (
-
+    -- Add a comment to demo CI job
     select
         id as customer_id,
         first_name,
