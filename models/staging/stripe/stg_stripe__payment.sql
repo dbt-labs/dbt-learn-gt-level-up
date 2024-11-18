@@ -7,7 +7,7 @@ source as (
 ),
 
 renamed as (
-
+--- Adding comment to demo slim CI
     select
         {{ cents_to_dollars('amount') }} as amount_usd,
         created,
