@@ -13,7 +13,7 @@ renamed as (
         name as product_name,
         type as product_type,
         description,
-        price *100 as price
+        price *1000 as price
 
     from source
 
