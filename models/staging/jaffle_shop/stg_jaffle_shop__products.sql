@@ -6,6 +6,7 @@ source as (
 
 ),
 
+-- Adding a comment to demo CI job
 renamed as (
 
     select
