@@ -1,0 +1,12 @@
+models:
+  - name: multi_touch_attribution
+    config: 
+      group: marketing
+  
+  - name: acquisition_costs
+    config: 
+      group: marketing
+  
+  - name: pageview_activity
+    config: 
+      group: marketing

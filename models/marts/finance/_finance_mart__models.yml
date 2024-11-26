@@ -1,0 +1,12 @@
+models:
+  - name: assets_and_liabilities
+    config: 
+      group: finance
+  
+  - name: return_on_sales
+    config: 
+      group: finance
+  
+  - name: sales_revenue
+    config: 
+      group: finance

@@ -1,0 +1,12 @@
+models:
+  - name: dim_customers
+    config: 
+      group: foundation
+
+  - name: fct_orders
+    config: 
+      group: foundation
+
+  - name: fct_page_views
+    config: 
+      group: foundation

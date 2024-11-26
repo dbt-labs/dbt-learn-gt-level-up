@@ -1,11 +1,16 @@
 models:
   - name: stg_jaffle_shop__customers
+    config: 
+      group: foundation
     columns:
       - name: customer_id
         data_tests:
           - unique
-          - not_null             
+          - not_null    
+
   - name: stg_jaffle_shop__orders
+    config: 
+      group: foundation
     columns:
       - name: order_id
         data_tests:
@@ -20,7 +25,10 @@ models:
                 - "return_pending"
                 - "placed"
                 - "shipped"
+
   - name: stg_jaffle_shop__products
+    config: 
+      group: foundation
     columns:
       - name: sku
         data_tests:

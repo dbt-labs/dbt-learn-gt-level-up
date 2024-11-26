@@ -1,0 +1,4 @@
+models:
+  - name: int_cust_orders
+    config: 
+      group: foundation

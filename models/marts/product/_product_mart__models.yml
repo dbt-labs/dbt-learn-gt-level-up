@@ -1,0 +1,12 @@
+models:
+  - name: product_feature_usage
+    config: 
+      group: product
+  
+  - name: account_activity
+    config: 
+      group: product
+  
+  - name: conversions
+    config: 
+      group: product

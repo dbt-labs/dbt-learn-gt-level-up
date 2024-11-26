@@ -1,0 +1,12 @@
+models:
+  - name: customer_lifetime_value
+    config: 
+      group: customer_success
+  
+  - name: customer_churn
+    config: 
+      group: customer_success
+  
+  - name: nps_survey_scores
+    config: 
+      group: customer_success
