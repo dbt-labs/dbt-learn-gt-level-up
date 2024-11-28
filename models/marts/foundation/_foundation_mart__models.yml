@@ -1,12 +1,50 @@
 models:
+
+# dim_customers model
   - name: dim_customers
+    access: protected
     config: 
       group: foundation
 
+# fct_orders model
   - name: fct_orders
+    latest_version: 1
+    access: protected
     config: 
       group: foundation
+      contract:
+        enforced: true
+    columns:
+      - name: order_id
+        data_type: number
+        constraints:
+          - type: not_null
+        description: ""
 
+      - name: customer_id
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: amount_usd
+        data_type: number
+        description: ""
+    
+    versions:
+      - v: 1
+        
+      - v: 2
+        columns:
+          - include: all
+            exclude: ['order_date']
+          - name: order_date
+            data_type: string
+
+# fct_page_views model
   - name: fct_page_views
+    access: protected
     config: 
       group: foundation

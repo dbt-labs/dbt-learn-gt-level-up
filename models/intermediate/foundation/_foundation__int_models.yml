@@ -1,4 +1,5 @@
 models:
   - name: int_cust_orders
+    access: private
     config: 
       group: foundation

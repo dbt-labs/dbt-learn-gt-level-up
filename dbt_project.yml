@@ -36,8 +36,20 @@ vars:
 
 models:
   jaffle_shop:
+    staging:
+      +materialized: view
+      foundation:
+        +group: foundation
+        +access: private
+    intermediate:
+      +materialized: view
+      foundation:
+        +group: foundation
+        +access: private
     marts:
       +materialized: table
+      foundation:
+        +group: foundation
       finance:
         +group: finance
       customer_success:
@@ -46,7 +58,3 @@ models:
         +group: product
       marketing:
         +group: marketing
-    intermediate:
-      +materialized: view
-    staging:
-      +materialized: view
