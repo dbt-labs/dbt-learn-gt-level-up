@@ -7,6 +7,7 @@ orders as (
 ),
 
 -- Here is a comment for CI demo
+-- Here is a comment for a Slim CI demo
 customer_orders as (
     select
         customer_id,
