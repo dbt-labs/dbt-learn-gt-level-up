@@ -6,6 +6,7 @@ orders as (
     select * from {{ ref('fct_orders')}}
 ),
 
+-- Here is a comment for CI demo
 customer_orders as (
     select
         customer_id,
