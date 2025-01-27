@@ -39,4 +39,5 @@ models:
     marts:
       +materialized: table
     staging:
+      +schema: "test_dopoku" 
       +materialized: view
