@@ -36,4 +36,5 @@ vars:
 
 models:
   jaffle_shop:
-    +materialized: view
+    +materialized: table
+    +tags: ['jaffle_shop']
