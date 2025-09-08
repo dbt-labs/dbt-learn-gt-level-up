@@ -7,6 +7,15 @@ models:
           - not_null             
   - name: stg_jaffle_shop__orders
     columns:
+      - name: customer_id
+        data_tests:
+          - unique:
+              config:
+                where: "order_date > '2018-03-01'"
+
+      - name: order_date
+        data_tests:
+          - assert_date_greater_2017
       - name: order_id
         data_tests:
           - unique
