@@ -2,12 +2,17 @@ models:
   - name: stg_jaffle_shop__customers
     config: 
       tags: ['daily']
+      group: finance
+      access: protected
     columns:
       - name: customer_id
         data_tests:
           - unique
           - not_null             
   - name: stg_jaffle_shop__orders
+    config:
+      group: finance
+      access: protected
     columns:
       - name: customer_id
         data_tests:

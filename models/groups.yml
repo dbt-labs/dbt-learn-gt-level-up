@@ -1,0 +1,9 @@
+groups:
+  - name: finance 
+    owner:
+      name: Finance team
+      email: TheirEmail@email.com
+  - name: marketing 
+    owner:
+      name: Marketing Group
+      email: marketing@jaffle.com
