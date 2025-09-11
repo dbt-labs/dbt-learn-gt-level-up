@@ -6,6 +6,9 @@ models:
           - unique
           - not_null             
   - name: stg_jaffle_shop__orders
+    config:
+      group: finance
+      access: protected
     columns:
       - name: order_id
         data_tests:
