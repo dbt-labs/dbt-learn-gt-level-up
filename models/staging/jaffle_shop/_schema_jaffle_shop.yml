@@ -2,7 +2,7 @@ models:
   - name: stg_jaffle_shop__customers
     config:
       group: finance
-      access: protected
+      access: public
     columns:
       - name: customer_id
         data_tests:
@@ -11,7 +11,7 @@ models:
   - name: stg_jaffle_shop__orders
     config:
       group: finance
-      access: private
+      access: public
     columns:
       - name: order_id
         data_tests:
