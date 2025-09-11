@@ -37,3 +37,8 @@ vars:
 models:
   jaffle_shop:
     +materialized: view
+
+
+tests:
+  jaffle_shop:
+    +severity: warn

@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner:
+      name: finance_team
+      email: finance@email.com
+  - name: marketing
+    owner:
+      name: John Joe
+      email: john.joe@email.com
