@@ -1,0 +1,6 @@
+models:
+  - name : dim_customers
+    description : descriptions
+    config:
+      group : marketing
+      access : public

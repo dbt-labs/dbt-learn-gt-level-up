@@ -1,5 +1,8 @@
 models:
   - name: stg_jaffle_shop__customers
+    config:
+      group : finance
+      access : protected
     columns:
       - name: customer_id
         data_tests:
@@ -8,6 +11,9 @@ models:
   - name: stg_jaffle_shop__orders
     columns:
       - name: order_id
+        config:
+          group : finance
+          access : private
         data_tests:
           - unique
           - not_null

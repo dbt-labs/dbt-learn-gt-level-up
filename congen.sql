@@ -1,0 +1,1 @@
+{{ codegen.generate_source(source_name="dim_customers", generate_columns=true) }}
