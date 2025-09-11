@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner:
+      name: finance team
+      email: finc@pmi.com
+  - name: marketing
+    owner:
+      name: JJ
+      email: mark@pmi.com
