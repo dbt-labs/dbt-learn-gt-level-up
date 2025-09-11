@@ -1,0 +1,12 @@
+groups:
+  - name: finance
+    owner: 
+      name: finance team
+      email: finance@epmi.com
+  - name: marketing
+    owner:
+      name: Marketing team
+      email: marketing@epmi.com
+
+
+      
