@@ -27,10 +27,10 @@ models:
         data_tests:
           - unique
           - not_null
-- name: stg_jaffle_shop__order_items 
-  description: all of the products purchased in each order. One product per row per order 
-  columns: 
-    - name: order_item_id 
-      data_tests: 
-      - unique 
-      - not_null
+  - name: stg_jaffle_shop__order_items 
+    description: all of the products purchased in each order. One product per row per order 
+    columns: 
+      - name: order_item_id 
+        data_tests: 
+        - unique 
+        - not_null
