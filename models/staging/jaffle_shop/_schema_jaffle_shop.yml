@@ -1,12 +1,24 @@
 models:
   - name: stg_jaffle_shop__customers
+    config:
+      group: finance
+      access: protected
     columns:
       - name: customer_id
         data_tests:
           - unique
           - not_null             
   - name: stg_jaffle_shop__orders
+    config:
+      group: finance
+      access: protected
     columns:
+      - name: customer_id
+        data_tests:
+          - unique:
+              config:
+                where: "order_date > '2018-03-01'"
+                store_failures: true
       - name: order_id
         data_tests:
           - unique

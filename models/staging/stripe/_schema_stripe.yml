@@ -1,0 +1,6 @@
+models:
+  - name: stg_stripe__payment
+    columns:
+    - name: amount_usd
+      data_tests:
+        - greater_than_five
