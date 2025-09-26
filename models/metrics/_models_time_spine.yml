@@ -1,3 +1,4 @@
+#models/metrics/_models_time_spine_daily.yml
 models:
   - name: time_spine_daily
     description: A time spine with one row per day, ranging from 5 years in the past to 30 days into the future.

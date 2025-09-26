@@ -1,3 +1,4 @@
+--models/metrics/time_spine_daily.sql
 {{
     config(
         materialized = 'table',

@@ -1,24 +1,24 @@
-# metrics/fct_orders.yml
+# models/metrics/fct_orders.yml
 semantic_models:
-  - name: orders
-    defaults:
-      agg_time_dimension: order_date
-    description: |
-      Order fact table. This table’s grain is one row per order.
-    model: ref('fct_orders')
-    entities:
-      - name: order_id
-        type: primary
-      - name: customer
-        expr: customer_id
-        type: foreign
-    dimensions:
-      - name: order_date
-        type: time
-        type_params:
-          time_granularity: day
-    # Newly added      
-    measures:   
+ - name: orders
+   defaults:
+     agg_time_dimension: order_date
+   description: |
+     Order fact table. This table's grain is one row per order.
+   model: ref('fct_orders')
+   entities:
+     - name: order_id
+       type: primary
+     - name: customer
+       expr: customer_id
+       type: foreign
+   # Newly added
+   dimensions:  
+     - name: order_date
+       type: time
+       type_params:
+         time_granularity: day
+   measures:   
       - name: order_total
         description: The total amount for each order including taxes.
         agg: sum
@@ -37,6 +37,7 @@ semantic_models:
           percentile: 0.99
           use_discrete_percentile: True
           use_approximate_percentile: False
+# Newly added         
 metrics:
  # Simple type metrics
  - name: "order_total"
@@ -89,3 +90,6 @@ metrics:
      metrics:
        - name: large_orders
        - name: order_count
+
+
+
