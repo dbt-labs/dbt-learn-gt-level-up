@@ -15,4 +15,5 @@ sources:
           error_after: {count: 30, period: minute}
         loaded_at_field: _etl_loaded_at
 
+      - name: order_items
 
