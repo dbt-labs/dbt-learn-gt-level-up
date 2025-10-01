@@ -12,3 +12,10 @@ semantic_models:
      - name: customer
        expr: customer_id
        type: foreign
+   dimensions:  
+     - name: order_date
+       type: time
+       type_params:
+         time_granularity: day
+
+
