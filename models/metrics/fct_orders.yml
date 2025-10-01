@@ -1,0 +1,20 @@
+# metrics/fct_orders.yml
+semantic_models:
+ - name: orders
+   defaults:
+     agg_time_dimension: order_date
+   description: |
+     Order fact table. This tables grain is one row per order.
+   model: ref('fct_orders')
+   entities:
+     - name: order_id
+       type: primary
+     - name: customer
+       expr: customer_id
+       type: foreign
+   # Newly added
+   dimensions:  
+     - name: order_date
+       type: time
+       type_params:
+         time_granularity: day
