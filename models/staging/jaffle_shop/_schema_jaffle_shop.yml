@@ -12,7 +12,7 @@ models:
   - name: stg_jaffle_shop__orders
     config:
       group: finance
-      access: finance
+      access: protected
     columns:
       - name: order_id
         data_tests:
