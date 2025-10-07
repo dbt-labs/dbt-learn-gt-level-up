@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner:
+      name: Finance Team
+      email: finance.team@jaffleshop.com
+  - name: marketing
+    owner: 
+      name: Marketing Team
+      email: joe.market@jaffleshop.com
