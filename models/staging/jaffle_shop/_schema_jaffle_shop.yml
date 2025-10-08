@@ -1,3 +1,4 @@
+
 models:
   - name: stg_jaffle_shop__customers
     config:
@@ -5,7 +6,7 @@ models:
       access: protected
     columns:
       - name: customer_id
-        data_tests:
+        tests:
           - unique
           - not_null
 
@@ -15,11 +16,11 @@ models:
       access: protected
     columns:
       - name: order_id
-        data_tests:
+        tests:
           - unique
           - not_null
       - name: status
-        data_tests:
+        tests:
           - accepted_values:
               values:
                 - "returned"
@@ -31,6 +32,6 @@ models:
   - name: stg_jaffle_shop__products
     columns:
       - name: sku
-        data_tests:
+        tests:
           - unique
           - not_null
