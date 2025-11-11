@@ -35,5 +35,13 @@ vars:
 # using the `{{ config(...) }}` macro.
 
 models:
-  jaffle_shop:
+  jaffle_shop: #this has to be after models as it is the name of the project
     +materialized: view
+  marts:
+    +materialized: table
+  staging:
+    +schema: staging
+
+  
+
+  
