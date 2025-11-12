@@ -15,7 +15,7 @@ validation_errors as (
         field_value
 
     from validation
-    where field_value < 0
+    where field_value <= 0
 
 )
 

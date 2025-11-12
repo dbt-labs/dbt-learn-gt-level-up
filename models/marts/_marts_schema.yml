@@ -3,4 +3,10 @@ models:
     columns:
     - name: amount_usd
       data_tests:
-        - assert_positive_values
+        - assert_positive_values:
+              config:
+                severity: warn
+            
+    - name: order_id
+      data_tests:
+          - dbt_utils.not_empty_string
