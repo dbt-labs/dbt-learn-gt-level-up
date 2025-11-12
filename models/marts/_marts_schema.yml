@@ -1,0 +1,6 @@
+models:
+  - name: fct_orders
+    columns:
+      - name: amount_usd
+        data_tests:
+          - assert_positive_values
