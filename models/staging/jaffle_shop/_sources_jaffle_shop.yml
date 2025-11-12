@@ -4,6 +4,7 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+      - name: products
       - name: orders
         freshness: # default freshness
           warn_after: {count: 15, period: day}
