@@ -7,7 +7,7 @@ sources:
       - name: products
       - name: orders
         freshness: # default freshness
-          warn_after: {count: 20, period: day}
+          warn_after: {count: 10, period: day}
           error_after: {count: 45, period: day}
         loaded_at_field: _etl_loaded_at
 
