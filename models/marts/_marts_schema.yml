@@ -1,0 +1,14 @@
+models:
+  - name: fct_orders
+    columns:
+      - name: amount_usd
+        data_tests:
+          - assert_positive_values:
+              config:
+                severity: error
+                error_if: ">2"
+                warn_if: ">0"
+      - name: order_id
+        data_tests:
+          - not_null
+          - dbt_utils.not_empty_string
