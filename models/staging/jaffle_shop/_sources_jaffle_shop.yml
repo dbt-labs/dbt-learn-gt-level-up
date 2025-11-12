@@ -1,9 +1,4 @@
 sources:
-  - name: jaffle_shop_new
-    database: raw
-    schema: jaffle_shop_new
-    tables:
-      - name: products
   - name: jaffle_shop
     database: raw
     schema: jaffle_shop
@@ -11,8 +6,8 @@ sources:
       - name: customers
       - name: orders
         freshness: # default freshness
-          warn_after: {count: 15, period: day}
-          error_after: {count: 30, period: minute}
+          warn_after: {count: 20, period: day}
+          error_after: {count: 45, period: minute}
         loaded_at_field: _etl_loaded_at
 
 
