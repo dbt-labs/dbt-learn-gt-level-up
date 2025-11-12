@@ -1,5 +1,5 @@
 with orders as  (
-    select * from {{ ref('fct_orders' )}}
+    select * from {{ ref('fct_page_views' )}}
 ),
 
 payments as (
