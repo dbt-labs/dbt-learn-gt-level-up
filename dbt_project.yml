@@ -37,7 +37,7 @@ vars:
 models:
   jaffle_shop:
     marts:
-      +materialized: table
+    +materialized: table
     staging:
       +schema: staging
 

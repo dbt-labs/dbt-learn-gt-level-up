@@ -1,5 +1,5 @@
 with orders as  (
-    select * from {{ ref('stg_jaffle_shop__orders' )}}
+    select * from {{ ref('fct_orders' )}}
 ),
 
 payments as (
@@ -9,7 +9,7 @@ payments as (
 order_payments as (
     select
         order_id,
-        sum(case when status = 'success' then amount_usd end) as amount_usd
+        sum(case when status = 'success' then amount_usd ) as amount_usd
 
     from payments
     group by 1
