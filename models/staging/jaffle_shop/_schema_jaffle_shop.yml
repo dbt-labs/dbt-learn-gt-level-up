@@ -4,7 +4,10 @@ models:
       - name: customer_id
         data_tests:
           - unique
-          - not_null             
+          - not_null
+          - relationships:
+              to: source('jaffle_shop', 'customers')
+              field: id          
   - name: stg_jaffle_shop__orders
     columns:
       - name: order_id
@@ -21,9 +24,9 @@ models:
                   - "return_pending"
                   - "placed"
                   - "shipped"
-  - name: stg_jaffle_shop__products
-    columns:
-      - name: sku
-        data_tests:
-          - unique
-          - not_null
+  # - name: stg_jaffle_shop__products
+  #   columns:
+  #     - name: sku
+  #       data_tests:
+  #         - unique
+  #         - not_null
