@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fct_orders
+    columns:
+      - name: amount_usd
+      - name: order_id
+        data_tests:
+          - dbt_utils.not_empty_string
