@@ -8,6 +8,7 @@ models:
                 severity: error
                 error_if: ">2"
                 warn_if: ">0"
+
       - name: order_id
         data_tests:
           - not_null
