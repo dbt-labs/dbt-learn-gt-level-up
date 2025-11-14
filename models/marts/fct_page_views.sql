@@ -1,11 +1,17 @@
 {{
     config(
-        tags='nightly'
+        tags='nightly',
+        materialized = 'incremental',
+        unique_key = 'page_view_id'
     )
 }}
 
 with events as (
     select * from {{ ref('stg_snowplow__events') }}
+    {% if is_incremental() %}
+        -- this filter will only be applied on an incremental run
+        where collector_tstamp > (select max(max_collector_tstamp) from {{ this }}) 
+    {% endif %}
 ),
 page_views as (
     select * from events
