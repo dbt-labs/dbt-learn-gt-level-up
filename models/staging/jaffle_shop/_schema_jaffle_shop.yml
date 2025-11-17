@@ -1,5 +1,7 @@
 models:
   - name: stg_jaffle_shop__customers
+    group: core
+    access: protected
     columns:
       - name: customer_id
         data_tests:
@@ -9,6 +11,8 @@ models:
               field: id
               to: source('jaffle_shop','customers')
   - name: stg_jaffle_shop__orders
+    group: core
+    access: protected
     columns:
       - name: order_id
         data_tests:

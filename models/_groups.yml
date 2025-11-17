@@ -1,0 +1,11 @@
+groups:
+  - name: core
+    owner: 
+      name: 'Deepa Zodge'
+  - name: marketing
+    owner: 
+      name: 'Deepa Zodge'
+  - name: finance
+    owner: 
+      name: 'Deepa Zodge'
+      

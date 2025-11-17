@@ -3,7 +3,7 @@ with customers as (
 ),
 
 orders as (
-    select * from {{ ref('fct_orders')}}
+    select * from {{ ref('fct_orders') }}
 ),
 
 customer_orders as (

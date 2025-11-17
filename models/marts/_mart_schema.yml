@@ -1,5 +1,7 @@
 models:
   - name: fct_orders
+    group: finance
+    access: protected
     columns:
       - name: amount_usd
         data_tests:
