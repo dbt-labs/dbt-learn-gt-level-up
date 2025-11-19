@@ -1,0 +1,9 @@
+snapshots:
+  - name: orders_snapshot
+    relation: source('jaffle_shop', 'orders')
+    config:
+      unique_key: id
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      invalidate_hard_deletes: False
+      dbt_valid_to_current: "to_date('9999-12-31')"
