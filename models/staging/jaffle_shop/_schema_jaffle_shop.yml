@@ -2,9 +2,12 @@ models:
   - name: stg_jaffle_shop__customers
     columns:
       - name: customer_id
+        data_type: int
         data_tests:
           - unique
-          - not_null             
+          - not_null
+      - name: first_name
+        data_type: string
     versions:
      - v: 2
        defined_in: stg_jaffle_shop__customers_v2
