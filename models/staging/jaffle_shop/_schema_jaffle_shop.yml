@@ -41,6 +41,7 @@ models:
                - shipped
                - completed
                - returned
+               - return_pending
      - name: customer_id
        data_type: int
        constraints:
