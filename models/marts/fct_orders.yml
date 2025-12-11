@@ -1,0 +1,18 @@
+models:
+- name: fct_orders
+  group: marketing
+  access: public
+  description: This model consolidates order information with payment details to provide
+    a comprehensive view of each order, including the total amount paid. It combines
+    data from the orders and payments sources, ensuring that each order is associated
+    with its corresponding payment amount, defaulting to zero if no payment is recorded.
+  columns:
+  - name: order_id
+    description: A unique identifier for each order.
+  - name: customer_id
+    description: The identifier for the customer who placed the order.
+  - name: order_date
+    description: The date when the order was placed.
+  - name: amount_usd
+    description: The total amount paid for the order in USD, defaulting to zero if
+      no payment was recorded.

@@ -1,11 +1,15 @@
 models:
   - name: stg_jaffle_shop__customers
+    group: marketing
+    access: private
     columns:
       - name: customer_id
         data_tests:
           - unique
           - not_null             
   - name: stg_jaffle_shop__orders
+    group: marketing
+    access: private
     columns:
       - name: order_id
         data_tests:
