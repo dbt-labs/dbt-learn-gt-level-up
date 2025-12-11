@@ -1,0 +1,5 @@
+groups:
+  - name: marketing
+    owner:
+      name: Sam Smith
+      email: sam@smith.com
