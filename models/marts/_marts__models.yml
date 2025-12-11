@@ -1,0 +1,4 @@
+models:
+  - name: dim_customers
+    group: marketing
+    access: public
