@@ -1,0 +1,23 @@
+models:
+  - name: fct_orders
+    description: This model consolidates order information from the 'stg_jaffle_shop__orders' and payment details from 'stg_stripe__payment'. It calculates the total payment amount in USD for each order, ensuring that only successful payments are considered. This model is useful for analyzing customer orders and their corresponding payment amounts.
+    group: marketing
+    access: public
+    columns:
+      - name: order_id
+        description: A unique identifier for each order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: The identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_date
+        description: The date when the order was placed.
+        tests:
+          - not_null
+      - name: amount_usd
+        description: The total amount paid for the order in USD, considering only successful payments.
+        tests:
+          - not_null
