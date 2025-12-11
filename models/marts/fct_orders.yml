@@ -1,0 +1,23 @@
+models:
+  - name: fct_orders
+    description: This model consolidates order information with payment details to provide a comprehensive view of each order, including the total amount paid in USD. It is useful for analyzing customer purchasing behavior and financial reporting.
+    group: marketing
+    access: public
+    columns:
+      - name: order_id
+        description: A unique identifier for each order.
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: The identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_date
+        description: The date when the order was placed.
+        tests:
+          - not_null
+      - name: amount_usd
+        description: The total amount paid for the order in USD, summing successful payments.
+        tests:
+          - not_null

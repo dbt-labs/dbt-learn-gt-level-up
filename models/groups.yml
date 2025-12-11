@@ -1,0 +1,11 @@
+groups:
+  - name: marketing
+    owner: 
+      name: Marketing Team
+      email: marketing@jaffle.shop
+
+  - name: finance
+    owner:
+      name: Finance Group
+      email: finance@jaffle.shop
+      
