@@ -1,0 +1,4 @@
+models:
+  - name: dim_customers.sql
+    group: marketing
+    access: public

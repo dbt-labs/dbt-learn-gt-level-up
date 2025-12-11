@@ -1,0 +1,4 @@
+models:
+  - name: stg_jaffle_shop__customers
+    group: marketing
+    access: public
