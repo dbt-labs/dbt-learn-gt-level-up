@@ -1,5 +1,6 @@
 models:
   - name: dim_customers
+    latest_version: 1
     group: marketing
     access: public
     config:
@@ -22,3 +23,9 @@ models:
         data_type: date
       - name: number_of_orders
         data_type: number
+    versions:
+      - v: 1
+      - v: 2
+        columns:
+          - include: all
+            exclude: [lifetime_value]
