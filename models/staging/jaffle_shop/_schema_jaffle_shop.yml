@@ -1,11 +1,15 @@
 models:
   - name: stg_jaffle_shop__customers
+    group: finance
+    access: public
     columns:
       - name: customer_id
         data_tests:
           - unique
           - not_null             
   - name: stg_jaffle_shop__orders
+    group: finance
+    access: public
     columns:
       - name: order_id
         data_tests:
@@ -22,6 +26,8 @@ models:
                   - "placed"
                   - "shipped"
   - name: stg_jaffle_shop__products
+    group: finance
+    access: public
     columns:
       - name: sku
         data_tests:

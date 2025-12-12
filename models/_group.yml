@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner:
+      # Use 'name' or 'email' (or both)
+      email: finance@jaffleshop.com
+  - name: marketing
+    owner:
+      # Use 'name' or 'email' (or both)
+      email: finance@jaffleshop.com
