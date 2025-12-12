@@ -1,0 +1,11 @@
+groups:
+  - name: finance
+    owner:
+      name: Corey 
+      email: corey.montano@ucdenver.edu
+  - name: marketing
+    owner:
+      name: Marketing Group
+      email: hdc@ucdenver.edu
+      
+      
