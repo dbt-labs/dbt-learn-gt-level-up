@@ -1,7 +1,5 @@
 models:
 - name: dim_customers
-  group: marketing
-  access: public
   description: This model consolidates customer information with their order history,
     providing insights into customer behavior and value. It includes details such
     as the customer's first and last name, the date of their first and most recent
