@@ -10,8 +10,14 @@ models:
   - name: stg_jaffle_shop__orders
     group: marketing
     access: private
+    config:
+     contract:
+       enforced: true
     columns:
       - name: order_id
+        data_type: int
+        constraints:
+         - type: not_null
         data_tests:
           - unique
           - not_null
