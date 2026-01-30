@@ -15,7 +15,7 @@ renamed as (
         orderid as order_id,
         paymentmethod as payment_method,
         status,
-        _batched_at
+        _batched_at::date
 
 
     from source

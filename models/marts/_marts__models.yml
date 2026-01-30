@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: This is a final model that contains more details about the customer entity
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+              

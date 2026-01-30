@@ -36,4 +36,8 @@ vars:
 
 models:
   jaffle_shop:
-    +materialized: view
+    marts:
+      +materialized: table
+    staging:
+      +schema: "test_dopoku" 
+      +materialized: view
