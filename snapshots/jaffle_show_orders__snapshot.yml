@@ -1,0 +1,11 @@
+snapshots:
+  - name: orders_snapshot
+    relation: source('jaffle_shop','orders')
+    config:
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      unique_key: id
+      dbt_valid_to_current: "to_date('9999-12-31')"
+      snapshot_meta_column_names:
+        dbt_valid_from: start_date
+        dbt_valid_to: end_date
