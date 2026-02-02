@@ -27,3 +27,6 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: order_date
+        data_tests:
+         - assert_date_greater_2017

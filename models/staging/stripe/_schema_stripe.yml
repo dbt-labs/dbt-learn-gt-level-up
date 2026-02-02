@@ -1,0 +1,7 @@
+models:
+  - name: stg_stripe__payment
+    description: description
+    columns:
+      - name: order_date
+        data_tests:
+         - assert_date_greater_2017
