@@ -21,6 +21,11 @@ models:
                   - "return_pending"
                   - "placed"
                   - "shipped"
+  
+      - name: order_date
+        data_tests: 
+          - date_greater_than_2017
+          
   - name: stg_jaffle_shop__products
     columns:
       - name: sku
