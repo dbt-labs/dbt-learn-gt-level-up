@@ -1,9 +1,8 @@
 {{
     config(
-        tags='nightly'
+        materialized='table'
     )
 }}
-
 with events as (
     select * from {{ ref('stg_snowplow__events') }}
 ),
