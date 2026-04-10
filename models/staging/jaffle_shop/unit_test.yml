@@ -1,0 +1,8 @@
+unit_tests:
+  - name: test_order_status_cleanup
+    description: Test my status case/when cleanup logic
+    model: stg_jaffle_shop__orders
+    given:
+      - input: source('jaffle_shop', 'orders')
+        rows: 
+          - (id:1, status: returned)
