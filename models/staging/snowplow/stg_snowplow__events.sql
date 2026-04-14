@@ -1,6 +1,6 @@
 {{
     config(
-        tags='nightly'
+        materialized='table'
     )
 }}
 
