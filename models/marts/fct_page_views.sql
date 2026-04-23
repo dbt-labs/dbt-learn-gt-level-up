@@ -1,11 +1,18 @@
 {{
     config(
-        tags='nightly'
+        tags='nightly',
+        materialized ='incremental',
+        unique_key = 'page_view_id',
+        on_schema_change = 'sync_all_columns'
     )
 }}
 
 with events as (
     select * from {{ ref('stg_snowplow__events') }}
+    {% if is_incremental() %}
+        -- this filter will only be applied on an incremental run
+        where collector_tstamp > (select max(max_collector_tstamp) -3 from {{ this }}) 
+    {% endif %}
 ),
 page_views as (
     select * from events
@@ -18,6 +25,7 @@ aggregated_page_events as (
         min(derived_tstamp) as page_view_start,
         max(collector_tstamp) as max_collector_tstamp
     from events
+
     group by 1
 ),
 joined as (
