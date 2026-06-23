@@ -1,0 +1,7 @@
+snapshots:
+- name: page_views_snapshot
+  relation: ref('fct_page_views')
+  config:
+    unique_key: page_view_id
+    strategy: timestamp
+    updated_at: collector_tstamp
