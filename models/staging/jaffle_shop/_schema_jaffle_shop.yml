@@ -21,6 +21,7 @@ models:
                   - "return_pending"
                   - "placed"
                   - "shipped"
+                  - "processing"
   - name: stg_jaffle_shop__products
     columns:
       - name: sku
