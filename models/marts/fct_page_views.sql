@@ -1,11 +1,15 @@
 {{
     config(
+        materialized='incremental',
         tags='nightly'
     )
 }}
 
 with events as (
     select * from {{ ref('stg_snowplow__events') }}
+    {% if is_incremental() %}
+        where collector_tstamp > (select max(collector_tstamp) from {{ this }}) 
+    {% endif %}
 ),
 page_views as (
     select * from events

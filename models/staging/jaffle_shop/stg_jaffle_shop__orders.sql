@@ -1,7 +1,6 @@
 {{
     config(
-        materialized='incremental',
-        unique_key='order_id'
+        materialized='incremental'
     )
 }}
 
@@ -12,7 +11,7 @@ source as (
     select * from {{ source('jaffle_shop', 'orders') }}
     {% if is_incremental() %}
         -- this filter will only be applied on an incremental run
-        where _etl_loaded_at > (select dateadd(day, -3, max(_etl_loaded_at)) from {{ this }}) 
+        where _etl_loaded_at > (select max(_etl_loaded_at) from {{ this }}) 
     {% endif %}
 
 ),
